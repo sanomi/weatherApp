@@ -1,5 +1,5 @@
 var $ = require('jquery');
-
+var css = require('./style.css');
 'use strict';
 $(document).ready(init);
 
