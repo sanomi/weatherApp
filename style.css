@@ -1,0 +1,63 @@
+input {
+	max-width: 140px;
+}
+
+.header {
+	color: black;
+	max-width: 100%;
+	min-width: 20%;
+	max-height: 50%;
+	margin: 50px auto;
+	background-image: url('http://3.bp.blogspot.com/-HLVjZgs3wM8/VcmJal9VahI/AAAAAAAAg-k/KL2MjKIhC7c/s1600/cloud-question-mark-710x345.jpg');
+	background-size: cover; 
+	border: ridge white 5px;
+	padding-left: 10px;
+	padding-bottom: 10px;
+}
+.sunny {
+	 background-image: url('https://static.pexels.com/photos/3768/sky-sunny-clouds-cloudy.jpg');  
+}
+
+.resultsWrapper {
+	background: white;
+	margin: 0px auto;
+	padding: 20px;
+}
+.dispTempF {
+	padding: 5px;
+	border-radius: 5%;
+}
+#radar {
+	  border: 5px solid black;
+    display: block;
+    width: 50%;
+    float: left;
+}
+.weatherInfo {
+	padding: 20px;
+	padding-left: 40px;
+	float: right;
+	width: 50%;
+}
+#webcam {
+	max-width: 65%;
+}
+
+.container {
+	background: white;
+	border: groove white 10px;
+}
+
+@media (max-width: 600px) {
+
+.weatherInfo {
+	clear: left;
+  margin: 0px auto;
+  display: block;
+  width: 100%;
+}
+#radar {
+	margin: 0px auto;
+	width: 100%;
+}
+}

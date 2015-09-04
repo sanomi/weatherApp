@@ -1,0 +1,31 @@
+chance {
+
+flurries
+rain
+sleet
+snow
+storms
+
+}
+
+clear
+cloudy
+flurries
+fog
+hazy
+
+
+mostly {
+  cloudy
+  sunny
+}
+
+partly cloudy or sunny are same
+
+sunny and clear are same
+
+tstorms
+
+unknown
+
+cloudy
