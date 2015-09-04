@@ -48,17 +48,14 @@ function goClicked(location, e) {
     }
     $('.currentInfo').empty();
     var $currentInfoArr = [];
-    if ( F !== 'NA'){
-      $currentInfoArr.push(F + '° Farenheight');
-    } else {
-      $currentInfoArr.push("<div>" + data.current_observation.feelslike_f + '° Fahrenheit</div>');
-    }
-    $currentInfoArr.push("<img src='" + icon_url + "'>");
     $currentInfoArr.push("<div>" + city + ',' + state + "</div>");
+    $currentInfoArr.push("<img src='" + icon_url + "'>");
+    if ( F !== 'NA'){
+      $currentInfoArr.push( "<span>" + F + "° Farenheight</span>");
+    } else {
+      $currentInfoArr.push("<span>" + data.current_observation.feelslike_f + '° Fahrenheit</span>');
+    }
     $('.currentInfo').append($currentInfoArr);
-
-    console.log($currentInfoArr);
-    console.log($('.currentInfo'));
 
       var $radar = $('.radar')
       $radar.empty();
@@ -79,7 +76,7 @@ function goClicked(location, e) {
     var date = array[index].date.weekday;
     var high = array[index].high.fahrenheit;
     var low = array[index].low.fahrenheit;
-    var $divID = $("<div id=" +  date + ">");
+    var $divID = $("<div class='individual'>");
     $divID.append("<img src='" + icon + "'>").append('<span>' + date + '</span>').append('<span> High: ' + high + ' ° F</span>').append('<span> Low: ' + low + '° F</span>');
     divArr.push($divID);
   })
@@ -87,7 +84,7 @@ function goClicked(location, e) {
       var webcamPromise = $.ajax("http://api.wunderground.com/api/a741b0d8e5cdb448/webcams/q/" + location + ".json");
       webcamPromise.success(function(data) {
       var image_url = data.webcams[0].CURRENTIMAGEURL;
-      $('#forecast').append('<span>Closest webcam:</span><br>').append("<img src='" + image_url + "' id='webcam'>");
+      $('#forecast').append("<span class='individual'>Closest webcam:</span><br>").append("<img src='" + image_url + "' id='webcam'>");
   })
   })
 

@@ -1,3 +1,7 @@
+body {
+	background-image: url('http://luc.devroye.org/KickstandApps-WeatherIcons-2013b.png');
+}
+
 input {
 	max-width: 140px;
 }
@@ -14,12 +18,8 @@ input {
 	padding-left: 10px;
 	padding-bottom: 10px;
 }
-.sunny {
-	 background-image: url('https://static.pexels.com/photos/3768/sky-sunny-clouds-cloudy.jpg');  
-}
 
 .resultsWrapper {
-	background: white;
 	margin: 0px auto;
 	padding: 20px;
 }
@@ -34,6 +34,8 @@ input {
     float: left;
 }
 .weatherInfo {
+	font-size: 1.5vw;
+  margin-top: -25px;
 	padding: 20px;
 	padding-left: 40px;
 	float: right;
@@ -44,13 +46,25 @@ input {
 }
 
 .container {
-	background: white;
+	background-color: rgba(186, 28, 23, 0.8);
 	border: groove white 10px;
+	padding-bottom: 20px;
+}
+.individual {
+	border: solid;
+  margin-top: 2px;
+  background: white;
+}
+.currentInfo {
+	border: solid;
+  margin-top: 2px;
+  background: white;
 }
 
 @media (max-width: 600px) {
 
 .weatherInfo {
+	font-size: 4vw;
 	clear: left;
   margin: 0px auto;
   display: block;
